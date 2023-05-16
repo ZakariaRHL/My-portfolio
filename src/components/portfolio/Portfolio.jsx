@@ -1,11 +1,7 @@
 import "./portfolio.css";
-
-import IMG1 from "../../assets/Educational Website.jpg";
-import IMG2 from "../../assets/RubyCode Blog Project.jpg";
-import IMG3 from "../../assets/Startup Agency Project.jpg";
-import IMG4 from "../../assets/Covid-19 Project.jpg";
-import IMG5 from "../../assets/Jokes Project.jpg";
-import IMG6 from "../../assets/Project4.jpg";
+import imgz1 from "../../assets/Screenshot (221).png";
+import imgz2 from "../../assets/Screenshot (222).png";
+import imgz3 from "../../assets/Screenshot (223).png";
 import React from "react";
 
 //Portfolio function
@@ -13,62 +9,33 @@ const Portfolio = () => {
   const soloProjects = [
     {
       id: 1,
-      title: "Educational Website with React.js",
-      img: IMG1,
+      title: "Food Meals Website with React.js",
+      img: imgz1,
       description:
-        "An educational website is a huge interactive platform to present various information for people.",
-      technologies: "Html | CSS | Javascript | React Js",
-      link: "https://educational-website-reactjs.netlify.app/",
-      github: "https://github.com/Rasif-Taghizada/Educational-Website-ReactJs",
+        "This food meals web app, powered by React JS, is a simple yet powerful tool for placing orders. It offers a range of functionalities that streamline the ordering process. Users can easily specify the quantity of desired recipes and instantly receive the total cost for both the recipes and the entire order. To achieve this, I implemented Redux, a state management library, which efficiently handles the application's functionalities. Furthermore, I ensured a visually appealing design to enhance the user experience, making the ordering process seamless and enjoyable.",
+      technologies: "Html | CSS | Javascript | Redux | React Js",
+      link: "#",
+      github: "#",
     },
     {
       id: 2,
-      title: "Covid-19 Tracking App",
-      img: IMG4,
+      title: "Restaurant Website with React.js",
+      img: imgz2,
       description:
-        "The COVID Tracking Project collects and publishes the most complete testing data available for all areas of the world.",
+        "Restaurant web app that I built using React.js, leveraging the power of Context API and incorporating a range of custom functions specifically designed for restaurant applications. Explore the seamless user experience, intuitive design, and efficient functionality that make this web app a standout choice for any restaurant business. Discover how I combined my technical expertise with a passion for creating innovative solutions. Get ready to embark on a delectable journey through the world of my restaurant web app.",
       technologies: "React | Redux",
-      link: "https://covid-19-tracker-weld-nu.vercel.app/",
-      github: "https://github.com/Rasif-Taghizada/Covid-19-Tracking",
+      link: "#",
+      github: "#",
     },
     {
       id: 3,
-      title: "RubyCode Blog Project",
-      img: IMG2,
-      description: "This site is a kind of social media platform. You can register and share your posts.",
-      technologies: "React | Redux",
-      link: "https://rubycode-blog-project.vercel.app/",
-      github: "https://github.com/Rasif-Taghizada/RubyCode-Blog",
-    },
-    {
-      id: 4,
-      title: "Startup Landing Page",
-      img: IMG3,
+      title: "E-Commerce Website with React.js | Redux ",
+      img: imgz3,
       description:
-        "A dedicated, standalone web page built for specific campaigns and target audiences.",
-      technologies: "Html | CSS | JavaScript | Next Js",
-      link: "https://alpha-agency-project.vercel.app/",
-      github: "https://github.com/Rasif-Taghizada/Alpha-Agency-Project",
-    },
-    {
-      id: 5,
-      title: "Jokes Project with Typescript",
-      img: IMG5,
-      description:
-        "For when you need a fast funny joke, here are some short jokes to get anyone giggling.",
-      technologies: "Html | Styled-components | Typescript",
-      link: "https://jokes-project.vercel.app/",
-      github: "https://github.com/Rasif-Taghizada/Joke-App",
-    },
-    {
-      id: 6,
-      title: "Fs Poster Website",
-      img: IMG6,
-      description:
-        "Real-world group project which is still in progress and will provide educational platform for future young developers",
-      technologies: "Html | Scss | Javascript",
-      link: "https://fs-poster-project.vercel.app/",
-      github: "https://github.com/Rasif-Taghizada/Fs-Poster-Project",
+        "The e-commerce web app I developed with React, React Router, and Redux provides a seamless online shopping experience. Using React's dynamic capabilities, users can effortlessly browse products, add items to their cart, and complete secure transactions. React Router ensures smooth navigation between pages without reloading, while Redux efficiently manages the app's state for features like shopping cart,  and order tracking. The web app features a visually appealing design to enhance user engagement.",
+      technologies: "React | Redux ",
+      link: "#",
+      github: "https://github.com/ZakariaRHL/e-commerce",
     },
   ];
 
@@ -81,7 +48,7 @@ const Portfolio = () => {
         {soloProjects.map((pro) => (
           <article className="portfolio__item" key={pro.id}>
             <div className="portfolio__item-image">
-              <img src={pro.img} alt={pro.title} />
+              <img src={pro.img} alt={pro.title} className="img-project" />
             </div>
             <div className="portfolio__item-content">
               <h3>{pro.title}</h3>

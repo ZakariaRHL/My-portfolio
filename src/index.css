@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@100;300;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@100;300;700;900&display=swap");
 
 * {
   margin: 0;
@@ -14,9 +14,12 @@
   --color-bg: #1f1f38;
   --color-bg-variant: #2c2c6c;
   --color-primary: #4db5ff;
-  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-primary-variant: #576cbc;
   --color-white: #fff;
+  --color-hover: #d65a31;
   --color-light: rgba(255, 255, 255, 0.6);
+  --color-darker: #222831;
+  --color-lighter: #eeeeee;
 
   --transition: all 400ms ease;
 
@@ -34,11 +37,10 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--color-bg);
-  color: var(--color-white);
+  font-family: "Poppins", sans-serif;
+  background-color: var(--color-darker);
+  color: var(--color-lighter);
   line-height: 1.7;
-  background-image: url(../src/assets/bg-texture.png);
 }
 
 .container {
@@ -65,7 +67,7 @@ section {
 
 section > h2,
 section > h5 {
-  color: var(--color-light);
+  color: var(--color-lighter);
   text-align: center;
 }
 
@@ -75,12 +77,12 @@ section > h2 {
 }
 
 .text-light {
-  color: var(--color-primary)
+  color: var(--color-primary);
 }
 
 a {
   transition: var(--transition);
-  color: var(--color-primary)
+  color: var(--color-primary);
 }
 
 a:hover {
@@ -90,22 +92,21 @@ a:hover {
 .btn {
   width: max-content;
   display: inline-block;
-  color: var(--color-primary);
+  color: var(--color-lighter);
   padding: 0.75rem 1.2rem;
   border-radius: 0.4rem;
   cursor: pointer;
-  border: 1px solid var(--color-primary);
+  border: 1px solid var(--color-lighter);
   transition: var(--transition);
 }
 
 .btn:hover {
-  background-color: var(--color-white);
-  color: var(--color-bg);
-  border-color: transparent;
+  background-color: var(--color-darker);
+  color: var(--color-lighter);
 }
 
 .btn-primary {
-  background-color: var(--color-primary);
+  background-color: var(--color-lighter);
   color: var(--color-bg);
 }
 
@@ -115,7 +116,7 @@ img {
   object-fit: cover;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .container {
     width: var(--container-width-md);
   }
@@ -125,7 +126,7 @@ img {
   }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   .container {
     width: var(--container-width-sm);
   }

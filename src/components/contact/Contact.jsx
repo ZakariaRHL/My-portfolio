@@ -1,9 +1,9 @@
-import './contact.css';
+import "./contact.css";
 
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 
-import { MdOutlineEmail } from 'react-icons/md';
-import emailjs from '@emailjs/browser';
+import { MdOutlineEmail } from "react-icons/md";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [message, setMessage] = useState(false);
@@ -13,10 +13,10 @@ const Contact = () => {
     setMessage(true);
     emailjs
       .sendForm(
-        'service_k2qawqh',
-        'template_c6rkpn6',
+        "service_i3jch5n",
+        "template_9hwyz7r",
         formRef.current,
-        'X7K7ebhIeOy3YwHki'
+        "_uu9VyJsDp7QK9Co-"
       )
       .then(
         (result) => {
@@ -42,8 +42,8 @@ const Contact = () => {
           <article className="contact__option">
             <MdOutlineEmail className="contact__option-icon" />
             <h4>Email</h4>
-            <h5>rasiftaghizade@gmail.com</h5>
-            <a href="mailto:mekomerikomg@gmail.com">Send a message</a>
+            <h5>zakariarahali280@gmail.com</h5>
+            <a href="mailto:zakariarahali280@gmail.com">Send a message</a>
           </article>
         </div>
         <form ref={formRef} onSubmit={handleSubmit}>
@@ -68,7 +68,7 @@ const Contact = () => {
           <button type="submit" className="btn btn-primary">
             Send Message
           </button>
-          {message && <span>Thanks, I'll reply ASAP :)</span>}
+          {message && <span>Thanks, I'll reply ASAP</span>}
         </form>
       </div>
     </section>
