@@ -14,8 +14,6 @@ const Portfolio = () => {
       description:
         "This food meals web app, powered by React JS, is a simple yet powerful tool for placing orders. It offers a range of functionalities that streamline the ordering process. Users can easily specify the quantity of desired recipes and instantly receive the total cost for both the recipes and the entire order. To achieve this, I implemented Redux, a state management library, which efficiently handles the application's functionalities. Furthermore, I ensured a visually appealing design to enhance the user experience, making the ordering process seamless and enjoyable.",
       technologies: "Html | CSS | Javascript | Redux | React Js",
-      link: "#",
-      github: "#",
     },
     {
       id: 2,
@@ -24,8 +22,6 @@ const Portfolio = () => {
       description:
         "Restaurant web app that I built using React.js, leveraging the power of Context API and incorporating a range of custom functions specifically designed for restaurant applications. Explore the seamless user experience, intuitive design, and efficient functionality that make this web app a standout choice for any restaurant business. Discover how I combined my technical expertise with a passion for creating innovative solutions. Get ready to embark on a delectable journey through the world of my restaurant web app.",
       technologies: "React | Redux",
-      link: "#",
-      github: "#",
     },
     {
       id: 3,
@@ -34,7 +30,7 @@ const Portfolio = () => {
       description:
         "The e-commerce web app I developed with React, React Router, and Redux provides a seamless online shopping experience. Using React's dynamic capabilities, users can effortlessly browse products, add items to their cart, and complete secure transactions. React Router ensures smooth navigation between pages without reloading, while Redux efficiently manages the app's state for features like shopping cart,  and order tracking. The web app features a visually appealing design to enhance user engagement.",
       technologies: "React | Redux ",
-      link: "#",
+      link: "https://e-commerce-red-ten.vercel.app/",
       github: "https://github.com/ZakariaRHL/e-commerce",
     },
   ];
@@ -55,24 +51,26 @@ const Portfolio = () => {
               <p>{pro.description}</p>
               <p>{pro.technologies}</p>
             </div>
-            <div className="portfolio__item-cta">
-              <a
-                href={pro.github}
-                target="_blank"
-                className="btn"
-                rel="noreferrer"
-              >
-                GitHub
-              </a>
-              <a
-                href={pro.link}
-                target="_blank"
-                className="btn btn-primary"
-                rel="noreferrer"
-              >
-                Live Demo
-              </a>
-            </div>
+            {pro.github && (
+              <div className="portfolio__item-cta">
+                <a
+                  href={pro?.github}
+                  target="_blank"
+                  className="btn"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
+                <a
+                  href={pro?.link}
+                  target="_blank"
+                  className="btn btn-primary"
+                  rel="noreferrer"
+                >
+                  Live Demo
+                </a>
+              </div>
+            )}
           </article>
         ))}
       </div>
